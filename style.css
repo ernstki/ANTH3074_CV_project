@@ -1,0 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+
+h1, h2, h3, h4 {
+  font-family:"Permanent Marker",helvetica,arial;
+  font-weight:400;
+}
