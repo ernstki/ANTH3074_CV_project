@@ -47,7 +47,8 @@ footer p {
 }
 
 footer .extralinks {
-  float:right;
+  position:fixed;
+  right:0;
 }
 
 footer a:visited, footer a:link {
