@@ -1,10 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic);
 
-body {
-  max-width:800px;
-  margin:3em auto 3em;
+* {
+  margin:0;
+  padding:0;
 }
+
+#main {
+  max-width:800px;
+  margin:3em auto 1em;
+}
+
 
 .marked li {
   font-family:"Permanent Marker",helvetica,arial;
@@ -28,8 +34,10 @@ ul {
 }
 
 footer {
+  height:3em;
   background:#ccc;
-  position:absolute;
+  clear:both;
+  position:fixed;
   bottom:0px;
   left:0px;
   width:100%;
@@ -38,8 +46,8 @@ footer {
 
 footer p {
   display:inline-block;
-  position:relative;
-  margin:0.5em 2em 1em;
+  float:left;
+  padding:0.5em 1.5em 0;
   font-family:"Open Sans Condensed",helvetica,arial;
   font-weight:300;
   color:#999;
@@ -47,8 +55,7 @@ footer p {
 }
 
 footer .extralinks {
-  position:absolute;
-  right:0;
+  float:right;
 }
 
 footer a:visited, footer a:link {
