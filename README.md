@@ -2,7 +2,7 @@
 
 Source files for [Group 3's Critical Vision project web site][mi] for 15SS_ANTH3074.
 
-## Other Useful Schtuph
+### Other Useful Schtuph ###
 
 * [Our Basecamp project site][b]
 * [Our Zotero group][z]
