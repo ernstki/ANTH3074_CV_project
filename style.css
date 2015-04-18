@@ -47,7 +47,7 @@ footer p {
 }
 
 footer .extralinks {
-  position:fixed;
+  position:absolute;
   right:0;
 }
 
