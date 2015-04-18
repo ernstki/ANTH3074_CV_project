@@ -1,6 +1,56 @@
 @import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic);
 
-h1, h2, h3, h4 {
+body {
+  max-width:800px;
+  margin:3em auto 3em;
+}
+
+.marked li {
   font-family:"Permanent Marker",helvetica,arial;
   font-weight:400;
+  font-size:3em;
+  line-height:1em;
+  color:#ccc;
+  text-shadow:0 0 10px rgba(0,0,0,0.3);
+  padding:0.5em;
+}
+
+.marked li:hover {
+  color:black;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+}
+
+ul {
+  margin:0.5em;
+  padding:0;
+  list-style-type:none;
+}
+
+
+footer {
+  background:#ccc;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  box-shadow:0 0 10px 10px #ccc;
+}
+
+footer p {
+  display:inline-block;
+  position:relative;
+  margin:0.5em 2em 1em;
+  font-family:"Open Sans Condensed",helvetica,arial;
+  font-weight:300;
+  color:#999;
+  /*font-style:italic;*/
+}
+
+footer a:visited, footer a:link {
+  color:#999;
+}
+
+footer a:hover, footer a:active {
+  color:#666;
 }
