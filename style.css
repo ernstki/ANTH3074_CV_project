@@ -27,7 +27,6 @@ ul {
   list-style-type:none;
 }
 
-
 footer {
   background:#ccc;
   position:absolute;
@@ -45,6 +44,10 @@ footer p {
   font-weight:300;
   color:#999;
   /*font-style:italic;*/
+}
+
+footer .extralinks {
+  float:right;
 }
 
 footer a:visited, footer a:link {
