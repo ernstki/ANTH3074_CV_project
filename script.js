@@ -1,9 +1,3 @@
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
-}, false);
-
 // Source: https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
 function toggleFullScreen() {
   if (!document.fullscreenElement &&    // alternative standard method
@@ -29,3 +23,25 @@ function toggleFullScreen() {
     }
   }
 }
+
+window.onload = function() {
+  document.addEventListener("keydown", function(e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  }, false);
+
+  var bodyClasses = document.body.classList;
+
+  // Get all the background images in the cache
+  var bg = new Image();
+  bg.src = 'army_of_one.png';
+
+  //document.getElementById('vets').onmouseover = function() {
+  //  bodyClasses.add('vet-cover');
+  //};
+  //document.getElementById('vets').onmouseout = function() {
+  //  bodyClasses.remove('vet-cover');
+  //};
+
+};
