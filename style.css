@@ -6,24 +6,87 @@
   padding:0;
 }
 
-.vet-cover {
-  background: url(army_of_one.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+html, body { height: 100% }
+
+.cover {
+  background-size: cover !important;
+  background: url(hoodie.png) no-repeat center center fixed;
+}
+
+.cover-hoodie {
+  background: url(hoodie-white.png) no-repeat center center fixed white;
+}
+
+@keyframes back-change {
+  from { background-color: black }
+  to   { background-color: white }
+}
+
+.cover-cops {
+  background: url(vulgar_display.png) no-repeat center center fixed;
+}
+
+.cover-fat {
+  background: url(fat_men_cant_lead_men.png) no-repeat center center fixed;
+}
+
+.cover-ink {
+  background: url(tattoo_parlor.png) no-repeat center center fixed;
+}
+
+.cover-logoff {
+  background: url(digital_identity.png) no-repeat center center fixed;
+}
+
+.cover-vets {
+  background: url(anything_helps.png) no-repeat center center fixed;
 }
 
 #main {
-  max-width:900px;
-  margin:3em auto 1em;
+  /*position:fixed;*/
+  margin-top:1.5em;
+  /*margin:3em auto 1em;*/
+  /*width:100%*/
 }
 
+#banner {
+  z-index:100;
+  /*position: absolute;*/
+  right:0;
+  width: 100%;
+  color: #333;
+  box-shadow: 1px 1px 10px;
+  text-shadow: 1px 1px 3px;
+}
 
-.marked li {
+#banner.intro {
+  text-shadow: 1px 1px 3px #000;
+  color: #A63E28;
+  text-shadow: 1px 1px 3px black;
+  box-shadow: none;
+  /*background: rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 10px black;*/
+}
+
+.marked {
   font-family:"Permanent Marker",helvetica,arial;
   font-weight:400;
-  font-size:4em;
+}
+
+ul.marked {
+  /*display:none;*/
+  margin:0 auto;
+  max-width:900px;
+  list-style-type:none;
+}
+
+.marked h1 {
+  font-size: 7em;
+  padding: 0 0.5em;
+}
+
+.marked li {
+  font-size:3.5em;
   line-height:1em;
   color:#999;
   text-shadow:0 0 10px rgba(0,0,0,0.3);
@@ -58,21 +121,19 @@
   text-shadow:1px 1px 1px rgba(162,62,40,0.5);
 }
 
-ul {
-  margin:0.5em;
-  padding:0;
-  list-style-type:none;
-}
 
 footer {
-  height:3em;
-  background:#ccc;
+  height:2.5em;
+  /*background:#ccc;*/
   clear:both;
   position:fixed;
   bottom:0px;
   left:0px;
   width:100%;
-  box-shadow:0 0 10px 10px #ccc;
+  /*box-shadow:0 0 10px 10px #ccc;*/
+  box-shadow: 1px 1px 10px;
+  background: url('hoodie.png') white;
+  background-size: cover;
 }
 
 footer p {
@@ -81,7 +142,7 @@ footer p {
   padding:0.5em 1.5em 0;
   font-family:"Open Sans Condensed",helvetica,arial;
   font-weight:300;
-  color:#999;
+  color:#333;
   /*font-style:italic;*/
 }
 
@@ -90,9 +151,9 @@ footer .extralinks {
 }
 
 footer a:visited, footer a:link {
-  color:#999;
+  color:#333;
 }
 
 footer a:hover, footer a:active {
-  color:#666;
+  color:#111;
 }
