@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <title>MARKED IDENTITIES</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    // Prevent initial flicker of elements that get rendered before Zepto's
+    // "onload" event gets a chance to hide them. Since this only works if
+    // JavaScript is enabled, it doesn't break the site if JS *isn't*
+    // enabled. Source: http://robertnyman.com/2008/05/13/how-to-hide-and-show-initial-content-depending-on-whether-javascript-support-is-available/
+    var head = document.getElementsByTagName('head')[0];
+    if (head) {
+      var styles = document.createElement('style');
+      styles.textContent = '.init-hide { display:none; }';
+      head.appendChild(styles);
+    }
+  </script>
 </head>
-<script>
-  // Prevent initial flicker of elements that get rendered before Zepto's
-  // "onload" event gets a chance to hide them. Since this only works if
-  // JavaScript is enabled, it doesn't break the site if JS *isn't*
-  // enabled. Source: http://robertnyman.com/2008/05/13/how-to-hide-and-show-initial-content-depending-on-whether-javascript-support-is-available/
-  var head = document.getElementsByTagName('head')[0];
-  if (head) {
-    var styles = document.createElement('style');
-    styles.textContent = '.init-hide { display:none; }';
-    head.appendChild(styles);
-  }
-</script>
 <body>
 
 <section class="init-hide marked" id="banner">

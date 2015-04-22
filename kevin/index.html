@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" class="cover">
+<html lang="en" class="cover cover-hummer">
 <head>
   <meta charset="UTF-8">
   <title>VETERANS</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    // Hide elements *immediately* on page load so they don't flicker.
+    var head = document.getElementsByTagName('head')[0];
+    if (head) {
+      var styles = document.createElement('style');
+      styles.textContent = '.init-hide { display:none; }';
+      head.appendChild(styles);
+    }
+  </script>
 </head>
-<script>
-  // Hide elements *immediately* on page load so they don't flicker.
-  var head = document.getElementsByTagName('head')[0];
-  if (head) {
-    var styles = document.createElement('style');
-    styles.textContent = '.init-hide { display:none; }';
-    head.appendChild(styles);
-  }
-</script>
 <body>
 
 <section class="init-hide marked" id="banner">
-  <h1>Marked Identities</h1>
+  <h2>"Thank you for your service."</h2>
 </section>
 
-<section class="init-hide" id="main">
+<section class="init-hide marked" id="main">
+  <h3>Cynical translation: <span class="deepred">"Thank Gawd it's not me
+      getting shot at out there."</span></h3>
+  <ul id="points" class="marked">
+    <li class="init-hide">But keep that oil flowing, honey.</li>
+    <li class="init-hide">At least we're not paying $10/gal like those
+    freedom-hating pinkos in Europe.</li>
+  </ul>
+
+  <!--<div id="side-photo"><img src="hummer_luv.jpg"></div>-->
 
 </section> <!--/#main-->
+<footer class="marked">
+  <div id="back"><a href="/top.html"><small>T</small></a>
+    <a href="#">&laquo;</a></div>
+  <div id="fwd"><a href="1.html">&raquo;</a></div>
+</footer>
 
-<script src="js/zepto.min.js"></script>
-<script src="js/fx.js"></script>
-<script src="js/fx_methods.js"></script>
-<script src="js/script.js"></script>
-<script src="js/util.js"></script>
-<script>
-</script>
+<script src="../js/zepto.js"></script>
+<script src="../js/fx.js"></script>
+<script src="../js/fx_methods.js"></script>
+<script src="../js/util.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

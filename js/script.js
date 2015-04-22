@@ -15,7 +15,7 @@ Zepto(function($) {
     logoff:
       [ 'http://youarenotyourfacebook.tumblr.com/', false, 'sarah' ],
     vets:
-      [ 'kevin/', false, 'kevin' ]
+      [ 'kevin/', true, 'kevin' ]
   };
 
   // Functions
@@ -79,6 +79,7 @@ Zepto(function($) {
     window.setTimeout(function() {
       $('#banner').fadeIn();
     }, 1500);
+
     window.setTimeout(function() {
       $('#links').fadeIn(1500);
     }, 2000);
@@ -89,8 +90,8 @@ Zepto(function($) {
   // -----------------------------------------
 
   // Get all the background images in the cache.
-  preload([ 'img/hoodie.png', 'img/riot_squad.png', 'img/army_of_one.png',
-            'img/tattoo_parlor.png', 'img/digital_identity.png',
+  preload([ 'img/hoodie.png', 'img/riot_police.png', 'img/gov_christie.png',
+            'img/tattoo_parlor.png', 'img/status_check.png',
             'img/anything_helps.png' ]);
 
   beginPresentation();

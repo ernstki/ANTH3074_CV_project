@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic);
+
+* {
+  margin:0;
+  padding:0;
+}
+
+/*html, body { height: 100% }*/
+
+body {
+  font-family:"Open Sans Condensed",helvetica,arial;
+  font-weight:300;
+  color:#333;
+}
+
+.cover {
+  background-size: cover !important;
+  background: url(../img/army_of_one.png) no-repeat center center fixed;
+}
+.cover-hummer {
+  background: url(hummer_luv.png) no-repeat center center fixed;
+}
+
+#main {
+  max-width:900px;
+  margin:3em auto 1em;
+  position:relative;
+}
+
+#side-photo {
+  max-width:50%;
+  position:fixed;
+  z-index:-100;
+  left:0;
+  top:6em;
+}
+
+#banner {
+  z-index:100;
+  /*position: absolute;*/
+  right:0;
+  width: 100%;
+  color: #ddd;
+  background-color: rgba(0,0,0,0.8);
+  box-shadow: 1px 1px 10px;
+  text-shadow: 1px 1px 3px;
+  margin-bottom:1.5em;
+}
+
+.marked {
+  font-family:"Permanent Marker",helvetica,arial;
+  font-weight:400;
+}
+
+ul.marked {
+  /*display:none;*/
+  margin:0 auto;
+  max-width:900px;
+  list-style-type:none;
+}
+
+h1, h2 {
+  /*line-height:1em;*/
+  padding: 0.3em 0.8em;
+}
+
+h3, h4 {
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.marked h1 {
+  font-size: 7em;
+  padding: 0 0.5em;
+}
+
+.marked h2 {
+  font-size: 4em;
+}
+
+.marked h3 {
+  font-size: 3.5em;
+  line-height:1em;
+  padding-bottom:0.8em;
+}
+
+
+.marked li {
+  font-size:3em;
+  line-height:1em;
+  color:#666;
+  text-shadow:0 0 10px rgba(0,0,0,0.3);
+  padding:0.2em 0 0.2em 1em;
+}
+
+.marked a:link {
+  color:inherit;
+  text-decoration:none;
+}
+
+.marked a:visited {
+  /*color:#ccc;*/
+  color:rgba(0,0,0,0);
+  text-shadow:1px 1px 10px rgba(204,204,204,0.5);
+  /*color:rgba(98, 36, 36, 1.0);*/
+  /*text-shadow:1px 1px 1px rgba(98, 36, 36, 0.5);*/
+}
+
+.marked a:hover {
+  /*color:black;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.5);*/
+  color:rgba(98, 36, 36, 1.0);
+  text-shadow:1px 1px 10px rgba(98, 36, 36, 0.5);
+  /*color:rgba(166, 62, 40, 1.0);
+  text-shadow:1px 1px 10px rgba(166, 62, 40, 0.5);*/
+  /*text-shadow:1px 1px 1px rgba(166, 62, 40, 0.5);*/
+}
+
+.marked a:active {
+  color:rgba(166, 62, 40, 1.0);
+  text-shadow:1px 1px 1px rgba(162,62,40,0.5);
+}
+
+footer {
+  font-size: 2em;
+}
+
+#back, #fwd {
+  position:fixed;
+  bottom:1em;
+  color:#999;
+}
+#back { left:1em; }
+#fwd  { right:1em; }
+
+.brightred {
+  color:rgba(166, 62, 40, 1.0);
+}
+
+.deepred {
+  color:rgba(98, 36, 36, 1.0);
+}
