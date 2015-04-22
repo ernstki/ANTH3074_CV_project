@@ -3,10 +3,20 @@ Zepto(function($) {
   // Variables that we'll need down below
   // ------------------------------------
 
-  var $html = $(document.body).parent()
-  var titles = [ 'cops', 'fat', 'ink', 'logoff', 'vets' ];
-  var covers = [ 'cover-cops', 'cover-fat', 'cover-ink', 'cover-logoff',
-                 'cover-vets' ];
+  // The name of the link; whether to open in an external window (NOT an
+  // iframe) and whose project it is:
+  var visions = {
+    cops:
+      [ 'ali/', false, 'ali' ],
+    fat:
+      [ 'http://obeseamalgamation.tumblr.com/', false, 'andrew' ],
+    ink:
+      [ 'http://storiesbehindthetattoo.tumblr.com/', false, 'shelby' ],
+    logoff:
+      [ 'http://youarenotyourfacebook.tumblr.com/', false, 'sarah' ],
+    vets:
+      [ 'kevin/', false, 'kevin' ]
+  };
 
   // Functions
   // ---------
@@ -34,15 +44,16 @@ Zepto(function($) {
   function loadEmbed(url) {
     $('#embed').attr('src', url);
     $('#links').hide();
-    $('#banner').fadeOut(800, function() {
+    $('#banner').fadeOut(1000);
+    window.setTimeout(function() {
       $('html').attr('class', '');
 
       $('#embed').fadeIn();
       // This was an unmitigated failure; I cheated off of Yummly's iframe
-      // wrapper and found out that 'position:absolute' and height and width at
-      // 100% were probably the only secrets. Frustration beyond words.
+      // wrapper and found out that 'position:absolute' and height and width
+      // at 100% were probably the only secrets. Frustration beyond words.
       //$('#embed').setIframeGeom();
-    });
+    }, 2500);
   }
 
   function setCoverClass($el, list, cls) {
@@ -91,43 +102,39 @@ Zepto(function($) {
     if (e.keyCode == 13) { toggleFullScreen(); }
   }, false);
 
-  //$(window).resize(function() {
-  //  if ($('#embed').css('display') !== 'none') {
-  //    $('#embed').setIframeGeom();
-  //  }
-  //});
-
-  $('#cops').mouseover(function() {
-    setCoverClass($html, covers, 'cover-cops');
-  });
-  //$('#cops').mouseout (function() { $html.removeClass('cover-cops'); });
-
-  $('#cops').click (function(e) {
-    e.preventDefault();
-    loadEmbed('ali.html');
-  })
-
-  $('#fat').mouseover(function() {
-    setCoverClass($html, covers, 'cover-fat');
-  });
-  //$('#fat').mouseout (function() { $html.removeClass('cover-fat'); });
-
-  $('#ink').mouseover(function() {
-    setCoverClass($html, covers, 'cover-ink');
-  });
-  //$('#ink').mouseout (function() { $html.removeClass('cover-ink'); });
-
-  $('#logoff').mouseover(function() {
-    setCoverClass($html, covers, 'cover-logoff');
-  });
-  //$('#logoff').mouseout (function() { $html.removeClass('cover-logoff'); });
-
-  $('#vets').mouseover(function() {
-    setCoverClass($html, covers, 'cover-vets');
-  });
-  //$('#vets').mouseout (function() { $html.removeClass('cover-vets'); });
-
   $('#nav-restart').click(animateIntro);
   $('#nav-top').click(beginPresentation);
+  $('#fos').click (function(e) {
+    e.preventDefault();
+    loadEmbed($(this).attr('href'));
+  })
 
-});
+
+  // Wire up all the mouseover events for the list items and their
+  // corresponding "cover images"
+  
+  var covers = [];
+  $(Object.keys(visions)).each(function() {
+    covers.push('cover-' + this);
+  });
+
+  $(Object.keys(visions)).each(function() {
+    var $html = $(document.body).parent();
+    var id    = '#' + this;
+    var cover = 'cover-' + this;
+    var url   = visions[this][0];
+    var ext   = visions[this][1];
+    var who   = visions[this][2];
+
+    $(id).mouseover(function() { setCoverClass($html, covers, cover); });
+
+    $(id).click (function(e) {
+      e.preventDefault();
+      if (ext) { document.location = url; }
+      else     { loadEmbed(url); }
+    })
+
+    $(id).attr('title', who.capFirst() + "'s Critical Vision project");
+  });
+
+}); // Zepto(function($)

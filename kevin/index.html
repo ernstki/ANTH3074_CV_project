@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="cover">
+<head>
+  <meta charset="UTF-8">
+  <title>VETERANS</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script>
+  // Hide elements *immediately* on page load so they don't flicker.
+  var head = document.getElementsByTagName('head')[0];
+  if (head) {
+    var styles = document.createElement('style');
+    styles.textContent = '.init-hide { display:none; }';
+    head.appendChild(styles);
+  }
+</script>
+<body>
+
+<section class="init-hide marked" id="banner">
+  <h1>Marked Identities</h1>
+</section>
+
+<section class="init-hide" id="main">
+
+</section> <!--/#main-->
+
+<script src="js/zepto.min.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/fx_methods.js"></script>
+<script src="js/script.js"></script>
+<script src="js/util.js"></script>
+<script>
+</script>
+</body>
+</html>

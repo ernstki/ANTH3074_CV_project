@@ -1,3 +1,4 @@
+// Some Zepto plugins (various sources)
 ;(function($) {
   // Add inner and outer width to zepto (adapted from
   // https://gist.github.com/alanhogan/3935463)
@@ -72,7 +73,13 @@
 })(Zepto)
 
 
-
+// Source: http://stackoverflow.com/a/476681
+// Usage:
+//preload([
+//    'img/imageName.jpg',
+//    'img/anotherOne.jpg',
+//    'img/blahblahblah.jpg'
+//]);
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
         $('<img/>')[0].src = this;
@@ -81,13 +88,11 @@ function preload(arrayOfImages) {
     });
 }
 
-// Usage:
 
-//preload([
-//    'img/imageName.jpg',
-//    'img/anotherOne.jpg',
-//    'img/blahblahblah.jpg'
-//]);
+// Source: http://stackoverflow.com/a/1026087
+String.prototype.capFirst = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
 
 // Source: https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
 function toggleFullScreen() {
