@@ -24,6 +24,9 @@ body {
 .cover-soldier {
   background: url(american_soldier.png) no-repeat center center fixed;
 }
+.cover-wounded {
+  background: url(combat_wounded.png) no-repeat center center fixed;
+}
 .cover-chopper {
   background: url(chopper.png) no-repeat center center fixed;
 }
@@ -38,6 +41,9 @@ body {
 }
 .cover-patriot {
   background: url(patriot_act.png) no-repeat center center fixed;
+}
+.cover-sailors {
+  background: url(flag_folding.png) no-repeat center center fixed;
 }
 .cover-predator {
   background: url(drone_pilots.png) no-repeat center center fixed;

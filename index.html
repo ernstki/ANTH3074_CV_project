@@ -24,6 +24,13 @@
 
     preload(['img/hoodie-white.png']);
 
+    window.addEventListener("keydown", function(e) {
+      // Space or the right arrow key
+      if (e.keyCode === 32 || e.keyCode === 39) {
+        document.location = 'top.html';
+      }
+    }, false);
+
     // Start the banner hidden:
     $('#title').css('visibility', 'hidden');
     $('#title').center();

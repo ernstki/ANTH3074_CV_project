@@ -39,14 +39,15 @@ Zepto(function($) {
 
   // Add an event listener for the spacebar (to advance to to next slide)
   window.addEventListener("keydown", function(e) {
+    // Space bar or the right arrow key
     if (e.keyCode === 32 || e.keyCode === 39) {
       document.location = $('#fwd > a')[0].href;
-    } else if (e.keyCode === 37) {
+    } else if (e.keyCode === 37) {                // The left arrow key
       var backlink = $('#back > a + a')[0];
       if (backlink) { document.location = backlink.href; }
-    } else if (e.keyCode === 84) {
+    } else if (e.keyCode === 84) {                // The 't' key
       document.location = $('#back > a')[0].href;
-    } else if (e.keyCode === 72) {
+    } else if (e.keyCode === 72) {                // The 'h' key
       document.location = 'index.html';
     }
   }, false);
