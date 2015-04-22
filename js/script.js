@@ -21,26 +21,6 @@ Zepto(function($) {
   // Functions
   // ---------
 
-  function animateIntro() {
-    $('#banner').addClass('intro');
-    $('#main').hide();
-    $('#footer').hide();
-
-    window.setTimeout(function() {
-      $('html').animate('back-change', 5000,
-        function() {
-          $('html').removeClass('cover-hoodie')
-          $('#footer').fadeIn(5000);
-          $('#main').fadeIn(6000);
-        });
-      $('#banner').fadeOut(2000,
-        function() {
-          $(this).removeClass('intro');
-          $(this).fadeIn(2000);
-        });
-    }, 5000);
-  } // animateIntro()
-
   function loadEmbed(url) {
     $('#embed').attr('src', url);
     $('#links').hide();
@@ -103,7 +83,6 @@ Zepto(function($) {
     if (e.keyCode == 13) { toggleFullScreen(); }
   }, false);
 
-  $('#nav-restart').click(animateIntro);
   $('#nav-top').click(beginPresentation);
   $('#fos').click (function(e) {
     e.preventDefault();

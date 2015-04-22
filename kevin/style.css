@@ -6,7 +6,7 @@
   padding:0;
 }
 
-/*html, body { height: 100% }*/
+html, body { height: 100% }
 
 body {
   font-family:"Open Sans Condensed",helvetica,arial;
@@ -18,8 +18,32 @@ body {
   background-size: cover !important;
   background: url(../img/army_of_one.png) no-repeat center center fixed;
 }
+.cover-newsprint {
+  background: url(../img/newsprint.png) no-repeat center center fixed;
+}
+.cover-soldier {
+  background: url(american_soldier.png) no-repeat center center fixed;
+}
+.cover-chopper {
+  background: url(chopper.png) no-repeat center center fixed;
+}
+.cover-homeless {
+  background: url(../img/anything_helps.png) no-repeat center center fixed;
+}
 .cover-hummer {
   background: url(hummer_luv.png) no-repeat center center fixed;
+}
+.cover-greenwich {
+  background: url(wu_greenwich.png) no-repeat center center fixed;
+}
+.cover-patriot {
+  background: url(patriot_act.png) no-repeat center center fixed;
+}
+.cover-predator {
+  background: url(drone_pilots.png) no-repeat center center fixed;
+}
+.cover-jesus {
+  background: url(republican_jesus.png) no-repeat center center fixed;
 }
 
 #main {
@@ -29,11 +53,34 @@ body {
 }
 
 #side-photo {
-  max-width:50%;
-  position:fixed;
   z-index:-100;
+  position:fixed;
   left:0;
-  top:6em;
+  bottom:0;
+  height:100%;
+}
+
+#img1, #img2 {
+  margin-top:1.5em;
+  display:inline-block;
+}
+#img1 img, #img2 img {
+  max-height:21em;
+}
+#img1 {
+  float:left;
+  padding-right:0.25em;
+}
+#img2 {
+  float:right;
+  padding-left:0.25em;
+}
+
+#side-content {
+  max-width:45%;
+  position:fixed;
+  right:0;
+  bottom:1em;
 }
 
 #banner {
@@ -84,6 +131,12 @@ h3, h4 {
   padding-bottom:0.8em;
 }
 
+.marked h4 {
+  font-size: 2.8em;
+  line-height:1em;
+  padding-bottom:0.8em;
+}
+
 
 .marked li {
   font-size:3em;
@@ -128,7 +181,12 @@ footer {
 #back, #fwd {
   position:fixed;
   bottom:1em;
-  color:#999;
+  color:black;
+  padding:0 0.5em 0.1em;
+  line-height:1em;
+  text-shadow:1px 1px 10px rgba(0,0,0,0.5);
+  background-color: rgba(255,255,255,0.5);
+  border-radius:10%;
 }
 #back { left:1em; }
 #fwd  { right:1em; }
