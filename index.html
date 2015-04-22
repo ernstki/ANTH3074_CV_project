@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="cover">
+<html lang="en" class="cover cover-hoodie">
 <head>
   <meta charset="UTF-8">
   <title>MARKED IDENTITIES</title>
@@ -7,37 +7,47 @@
 </head>
 <body>
 
-<section class="marked" id="banner">
-  <h1>Marked Identities</h1>
-</section>
+<div id="main">
+  <section class="marked" id="banner">
+    <h1 class="deepred" id="title"><a id="next" href="top.html">
+      Marked Identities</a></h1>
+  </section>
+</div>
 
-<section id="main">
-  <ul class="marked">
-    <li><a id="cops" href="ali/who_is_the_criminal.png">
-         Inverting the Roles of Police and Perps</a></li>
-    <li><a id="fat" href="#">Exceptional Male Bodies &amp; Fat
-         Shaming</a></li>
-    <li><a id="ink" href="#">The Stories Tattoos Tell</a></li>
-    <li><a id="logoff" href="#">Turn On, Tune In, and Log Off</a></li>
-    <li><a id="vets" href="#">Veterans as Instruments of
-         Visuality</a></li>
-  </ul>
-</section>
+<script src="js/zepto.min.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/fx_methods.js"></script>
+<script src="js/util.js"></script>
+<script>
 
-<footer>
-  <p>For Dr. Sadre-Orafai's <a href="http://formsofseeing2015.tumblr.com">
-    ANTH3074 <em>Forms of Seeing</em></a> course, spring
-    semester 2015. Written content <a href="https://creativecommons.org/licenses/by/4.0/"
-    title="Creative Commons Attribution, International 4.0">CC-BY 4.0</a>.
-  </p>
-  <p class="extralinks">
-    <a href="https://15ssanth3074.basecamphq.com/projects/12711823">Basecamp</a> | 
-    <a href="https://www.zotero.org/groups/15ss_anth3074">Zotero</a>
-  </p>
-</footer>
-<script src="zepto.min.js"></script>
-<script src="fx.js"></script>
-<script src="fx_methods.js"></script>
-<script src="script.js"></script>
+  Zepto(function($) {
+
+    preload(['img/hoodie-white.png']);
+
+    // Start the banner hidden:
+    $('#title').css('visibility', 'hidden');
+    $('#title').center();
+    $('#title').hide();
+    $('#title').css('visibility', 'visible');
+
+    window.setTimeout(function() {
+      $('#title').show(1000);
+    }, 500);
+
+    $(window).resize(function() {
+      $('#title').center();
+    });
+
+    $('#next').click(function(e) {
+      e.preventDefault();
+      //$('#title').fadeOut(500);
+      $('#title').animate({ 'top': '-10em' }, 1000, 'ease-in-out');
+      $('html').animate({ 'background-color': 'rgba(0,0,0,0.1)' }, 1000,
+        function() { document.location = 'top.html';
+      });
+    });
+
+  });
+</script>
 </body>
 </html>
