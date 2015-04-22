@@ -5,17 +5,29 @@
   <title>MARKED IDENTITIES</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
 <script>
-  
+  // Prevent initial flicker of elements that get rendered before Zepto's
+  // "onload" event gets a chance to hide them. Since this only works if
+  // JavaScript is enabled, it doesn't break the site if JS *isn't*
+  // enabled. Source: http://robertnyman.com/2008/05/13/how-to-hide-and-show-initial-content-depending-on-whether-javascript-support-is-available/
+  var head = document.getElementsByTagName('head')[0];
+  if (head) {
+    var styles = document.createElement('style');
+    styles.textContent = '.init-hide { display:none; }';
+    head.appendChild(styles);
+  }
 </script>
+<body>
 
-<section class="marked" id="banner">
+<section class="init-hide marked" id="banner">
   <h1>Marked Identities</h1>
 </section>
 
-<section id="main" onload="function(e){e.target.style.display='none';">
+<section class="init-hide" id="main">
+
+  <!-- Frame for loading external sites --> 
   <iframe id="embed" style="display:none"></iframe>
+
   <ul id="links" class="marked">
     <li><a id="cops" href="ali/who_is_the_criminal.png">
          Inverting the Roles of Police and Perps</a></li>
@@ -28,10 +40,10 @@
     <li><a id="vets" href="#">Veterans as Instruments of
          Visuality</a></li>
   </ul>
-</section>
+</section> <!--/#main-->
 
-<footer id="footer">
-  <p class="nav">[<a id="nav-top" href="#top">top</a> <!--| <a id="nav-restart"
+<footer class="init-hide" id="footer">
+  <p class="nav">[<a id="nav-top" href="#top">top</a><!--| <a id="nav-restart"
     href="#restart">restart</a-->]</p>
   <p class="about">For Dr. Sadre-Orafai's <a
     href="http://formsofseeing2015.tumblr.com">ANTH3074 <em>Forms of
@@ -43,7 +55,8 @@
     <a href="https://15ssanth3074.basecamphq.com/projects/12711823">Basecamp</a> | 
     <a href="https://www.zotero.org/groups/15ss_anth3074">Zotero</a>
   </p>
-</footer>
+</footer> <!--/#footer-->
+
 <script src="js/zepto.min.js"></script>
 <script src="js/fx.js"></script>
 <script src="js/fx_methods.js"></script>

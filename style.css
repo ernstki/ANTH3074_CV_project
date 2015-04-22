@@ -6,12 +6,16 @@
   padding:0;
 }
 
-/*html, body { height: 100% }*/
+html, body { height: 100% }
 
-iframe#embed {
-  /*position:fixed;*/
-  /*height:100%;*/
+#embed {
   border:none;
+  /* These next three seem to be the secret sauce. */
+  position:absolute;
+  height:100%;
+  width:100%;
+  box-sizing:border-box;
+  padding-bottom:2.5em;
   /*margin:0 auto;*/
 }
 

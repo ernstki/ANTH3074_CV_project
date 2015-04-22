@@ -33,7 +33,7 @@
   });
 
   $.extend($.fn, {
-    center: function () {
+    center: function() {
       this.css("position","absolute");
       this.css("top", Math.max(0,
             (($(window).height() - $(this).outerHeight()) / 2)
@@ -44,6 +44,24 @@
       return this;
     }, // $.fn.Center
 
+    // Source: http://www.456bereastreet.com/archive/201112/how_to_adjust_an_iframe_elements_height_to_fit_its_content/
+    setIframeGeom: function() {
+      this.height($('body').outerHeight() - $('footer').outerHeight());
+      //$('#embed').css('margin-left', 0.5*($('body').width()
+      //    - $('#embed')[0].contentWindow.document.documentElement.scrollWidth));
+      //iframe = this[0];
+      //if (iframe) {
+      //  var iframeWin = iframe.contentWindow ||
+      //                  iframe.contentDocument.parentWindow;
+      //  if (iframeWin.document.body) {
+      //    iframe.height = iframeWin.document.documentElement.scrollHeight ||
+      //                    iframeWin.document.body.scrollHeight;
+      //    iframe.width  = iframeWin.document.documentElement.scrollWidth ||
+      //                    iframeWin.document.body.scrollWidth;
+      //  }
+      //}
+    }, // $.fn.setIframeGeom()
+
     removeAllClassesBut: function(list, except) {
       for (var i = 0; i < list.length; i++) {
         if (list[i] === except) { continue; }
@@ -53,22 +71,6 @@
   })
 })(Zepto)
 
-// Source: http://www.456bereastreet.com/archive/201112/how_to_adjust_an_iframe_elements_height_to_fit_its_content/
-function setIframeGeom(iframe) {
-  //$('#embed').height($('body').height() - $('footer').height());
-  //$('#embed').css('margin-left', 0.5*($('body').width()
-  //    - $('#embed')[0].contentWindow.document.documentElement.scrollWidth));
-  if (iframe) {
-    var iframeWin = iframe.contentWindow ||
-                    iframe.contentDocument.parentWindow;
-    if (iframeWin.document.body) {
-      iframe.height = iframeWin.document.documentElement.scrollHeight ||
-                      iframeWin.document.body.scrollHeight;
-      iframe.width  = iframeWin.document.documentElement.scrollWidth ||
-                      iframeWin.document.body.scrollWidth;
-    }
-  }
-} // setIframeGeom()
 
 
 function preload(arrayOfImages) {

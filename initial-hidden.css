@@ -1,3 +1,4 @@
-  #embed, #banner, #links, #footer {
-    display:none;
-  }
+/* #embed, #banner, #links, #footer */
+.init-hide {
+  display:none;
+}
