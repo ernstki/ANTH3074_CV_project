@@ -107,8 +107,10 @@ ul.marked {
 
 .marked a:visited {
   /*color:#ccc;*/
-  color:rgba(0,0,0,0);
-  text-shadow:1px 1px 10px rgba(204,204,204,0.5);
+  color:rgba(166, 62, 40, 1.0);
+  /*color: rgba(204,204,204,1.0);*/
+  text-shadow: 1px 1px 10px rgba(166, 62, 40, 0.5);
+  /*text-shadow:1px 1px 10px rgba(204,204,204,0.5);*/
   /*color:rgba(98, 36, 36, 1.0);*/
   /*text-shadow:1px 1px 1px rgba(98, 36, 36, 0.5);*/
 }
